@@ -1,6 +1,7 @@
 package myPackage;
 import java.util.Scanner;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OpenChromeBrowser {
@@ -16,13 +17,15 @@ public class OpenChromeBrowser {
 		
 		// Creating Driver object
 		System.setProperty("webdriver.chrome.driver","C:\\tools\\chromedriver_win32 (1)\\chromedriver.exe");
-		ChromeDriver obj1 = new ChromeDriver();
-		obj1.get(name);
-		String title = obj1.getTitle();
+		ChromeDriver Driver = new ChromeDriver();
+		Driver.get(name);
+		String title = Driver.getTitle();
 		System.out.println("Page Title is:-" + title);
-		//obj1.get("https://Hindiwikipedia.com");
-		//obj1.navigate().back();
-		obj1.close();
+		Driver.get("https://Hindiwikipedia.com");
+		Driver.navigate().back();
+		//Driver.findElement(By.id("login-username")).sendKeys("chetanvelhal4@gmail.com");
+		//Driver.findElement(By.name("signin")).click();
+		Driver.close();
 		
 	}
 	
