@@ -10,6 +10,7 @@ public class HomeProject {
 		
 		GoodsSupplier obj2 = new GoodsSupplier();
 		obj2.GSU();
+		
 		//
 		
 	}
